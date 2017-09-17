@@ -9,17 +9,18 @@
             li(v-for="lk in item.links")
               a(:href="lk.link") {{ lk.text }}
     container.copyright
-        | &copy; teste de copyright {{ year }}
+        | &copy; {{ year }}. {{ copy }}
 
 </template>
 <script>
 
-  import axios from 'axios';
+  import defaultContentProvider from '@/providers/defaultContentProvider';
 
   export default {
     data() {
       return {
         navegation: [],
+        copy: '',
         year: new Date().getFullYear(),
       };
     },
@@ -28,7 +29,10 @@
     },
     methods: {
       read() {
-        axios.get('static/footer_tree.json').then(res => this.navegation = res.data);
+        return defaultContentProvider.getFooter().then(res => {
+          this.navegation = res.links;
+          this.copy = res.copyright;
+        });
       },
     },
   };

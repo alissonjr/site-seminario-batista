@@ -8,7 +8,7 @@
 </template>
 <script>
 
-  import axios from 'axios';
+  import defaultContentProvider from '@/providers/defaultContentProvider';
 
   import NavMenuLink from '@/components/navegation/NavMenuLink';
 
@@ -26,7 +26,7 @@
     },
     methods: {
       read() {
-        axios.get('static/menu_primary_links.json').then(res => this.navegation = res.data);
+        return defaultContentProvider.getPrimaryMenu().then(res => this.navegation = res);
       },
     },
   };

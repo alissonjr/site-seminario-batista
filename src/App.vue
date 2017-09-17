@@ -14,6 +14,8 @@
 
   @import "../node_modules/vue-flexboxgrid/dist/vue-flexboxgrid.css"
 
+  @import "../node_modules/font-awesome/css/font-awesome.min.css"
+
   @import url("https://fonts.googleapis.com/css?family=Open+Sans")
 
   #app

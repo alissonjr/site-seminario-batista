@@ -1,53 +1,56 @@
-[
-  {
-    "title": "teste1",
-    "links": [
-      {
-        "text": "aaaaaaaaaaa",
-        "link": "hello.html"
-      },
-      {
-        "text": "hello 2",
-        "link": "hello1.html"
-      },
-      {
-        "text": "hello 3",
-        "link": "hello2.html"
-      }
-    ]
-  },
-  {
-    "title": "teste2",
-    "links": [
-      {
-        "text": "hello 1",
-        "link": "hello.html"
-      },
-      {
-        "text": "hello 2",
-        "link": "hello1.html"
-      },
-      {
-        "text": "hello 3",
-        "link": "hello2.html"
-      }
-    ]
-  },
-  {
-    "title": "teste3",
-    "links": [
-      {
-        "text": "hello 1",
-        "link": "hello.html"
-      },
-      {
-        "text": "hello 2",
-        "link": "hello1.html"
-      },
-      {
-        "text": "hello 3",
-        "link": "hello2.html"
-      }
-    ]
-  }
-]
+{
+  "copyright": "Todos os direitos reservados.",
+  "links": [
+    {
+      "title": "teste1",
+      "links": [
+        {
+          "text": "aaaaaaaaaaa",
+          "link": "hello.html"
+        },
+        {
+          "text": "hello 2",
+          "link": "hello1.html"
+        },
+        {
+          "text": "hello 3",
+          "link": "hello2.html"
+        }
+      ]
+    },
+    {
+      "title": "teste2",
+      "links": [
+        {
+          "text": "hello 1",
+          "link": "hello.html"
+        },
+        {
+          "text": "hello 2",
+          "link": "hello1.html"
+        },
+        {
+          "text": "hello 3",
+          "link": "hello2.html"
+        }
+      ]
+    },
+    {
+      "title": "teste3",
+      "links": [
+        {
+          "text": "hello 1",
+          "link": "hello.html"
+        },
+        {
+          "text": "hello 2",
+          "link": "hello1.html"
+        },
+        {
+          "text": "hello 3",
+          "link": "hello2.html"
+        }
+      ]
+    }
+  ]
+}

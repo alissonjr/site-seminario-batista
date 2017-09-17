@@ -1,7 +1,8 @@
 <template lang="pug">
   
   header
-    h1 FULL TITLE HERE
+    container
+      h1 FULL TITLE HERE
 
 </template>
 <script>

@@ -1,14 +1,17 @@
 <template lang="pug">
   
-  nav
+  div
     ul
       li(v-for="nav in navegation")
         a(:href="nav.link") {{ nav.text }}
+      li
+        a
+          i(class="fa fa-info")
 
 </template>
 <script>
 
-  import axios from 'axios';
+  import defaultContentProvider from '@/providers/defaultContentProvider';
 
   import NavMenuLink from '@/components/navegation/NavMenuLink';
 
@@ -26,7 +29,7 @@
     },
     methods: {
       read() {
-        axios.get('static/menu_secondary_links.json').then(res => this.navegation = res.data);
+        return defaultContentProvider.getSecondaryMenu().then(res => this.navegation = res);
       },
     },
   };
@@ -34,12 +37,12 @@
 </script>
 <style lang="sass" scoped>
 
-  nav
+  div
     ul
       li
         list-style: none
         float: left
-        a
+        a, .text
           padding: 0 20px
           text-decoration: none
           display: flex
@@ -48,7 +51,7 @@
           min-height: 30px
           font-size: .8em
           color: #919191
-          &:hover
-            color: #6A6A6A
+        a:hover
+          color: #6A6A6A
 
 </style>
