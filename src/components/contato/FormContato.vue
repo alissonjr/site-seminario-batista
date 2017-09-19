@@ -4,13 +4,13 @@
     h1.title contato
     form
       fieldset
-        label
+        label Nome:
         input(type="text")
       fieldset
-        label
-        input(type="text")
+        label Email:
+        input(type="email")
       fieldset
-        label
+        label Comentário:
         textarea
 
 </template>
@@ -20,7 +20,7 @@
   export default {
     data() {
       return {
-        
+
       }
     }
   }
@@ -33,9 +33,14 @@
   .contato
     flex: 1 auto
     background: #fdfdfd
-    padding: 50px
+    padding: 100px 50px
     text-align: right
-    input, textarea, select
-      width: 300px
-
+    fieldset
+      input, textarea, select, label
+        width: 300px
+        display: block
+        text-align: left
+        margin-left: auto
+      label
+      
 </style>

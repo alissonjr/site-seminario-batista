@@ -30,7 +30,7 @@
     justify-content: center
     align-items: center
     color: white
-    min-height: 400px
+    min-height: 500px
     h1
       text-transform: uppercase
   

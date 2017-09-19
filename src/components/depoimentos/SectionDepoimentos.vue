@@ -36,8 +36,23 @@
 <style lang="sass" scoped>
 
   section
-    background: white
-    padding: 50px 0
+    .container
+      padding: 100px 0
+      position: relative
+      &:before
+        content: ' '
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: url(../../assets/chat.svg) no-repeat
+        background-position: 50px center
+        background-size: 350px
+        background-color: white
+        opacity: 0.05
+        z-index: -1
     .title
       text-align: left
       margin-bottom: 10

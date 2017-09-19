@@ -1,14 +1,22 @@
 [
   {
-    "text": "hello 1",
+    "text": "Home",
     "link": "hello.html"
   },
   {
-    "text": "hello 2",
+    "text": "Sobre",
     "link": "hello1.html"
   },
   {
-    "text": "hello 3",
+    "text": "Cursos",
+    "link": "hello1.html"
+  },
+  {
+    "text": "Professores",
     "link": "hello2.html"
+  },
+  {
+    "text": "Depoimentos",
+    "link": "hello1.html"
   }
 ]

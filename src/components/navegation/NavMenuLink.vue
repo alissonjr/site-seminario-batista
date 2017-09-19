@@ -1,6 +1,6 @@
 <template lang="pug">
 
-  a(v-bind:href="link" class="block") {{ text }}
+  a(v-bind:href="link") {{ text }}
 
 </template>
 <script>
@@ -18,7 +18,7 @@
 </script>
 <style lang="sass" scoped>
 
-  .block
+  a
     padding: 0 20px
     text-decoration: none
     color: #7b8394
@@ -29,5 +29,7 @@
     font-size: 1em
     font-weight: bold
     text-transform: uppercase
+    &:hover
+      background: rgba(0, 0, 0, 0.04)
 
 </style>

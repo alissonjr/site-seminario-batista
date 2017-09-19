@@ -4,9 +4,11 @@
     ul
       li(v-for="nav in navegation")
         a(:href="nav.link") {{ nav.text }}
-      li
-        a
-          i(class="fa fa-info")
+      li.address
+        a(:href="getMapLink(address)" target="_blank")
+          i(class="fa fa-map-marker")
+          | 
+          | {{ address }}
 
 </template>
 <script>
@@ -22,6 +24,7 @@
     data() {
       return {
         navegation: [],
+        address: "",
       };
     },
     created() {
@@ -29,8 +32,14 @@
     },
     methods: {
       read() {
-        return defaultContentProvider.getSecondaryMenu().then(res => this.navegation = res);
+        return defaultContentProvider.getSecondaryMenu()
+          .then(res => this.navegation = res)
+          .then(defaultContentProvider.getcompanyAddress)
+          .then(res => this.address = `${res.location}, Nº ${res.number}, ${res.district}, ${res.city} - ${res.state}`);
       },
+      getMapLink(address) {
+        return `https://www.google.com/maps/search/?api=1&query=Primeira Igreja Batista ${address}`;
+      }
     },
   };
 
@@ -53,5 +62,9 @@
           color: #919191
         a:hover
           color: #6A6A6A
+          background: rgba(0, 0, 0, 0.01)
+        &.address
+          .fa
+            margin-right: 5px
 
 </style>

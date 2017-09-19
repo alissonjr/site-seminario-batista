@@ -50,4 +50,26 @@ export default class defaultContentProvider {
     static async getTestimonies() {
         return await fullPromise.onlyData('static/testemunhos.json');
     }
+
+    /**
+     * Retorna os dados de endereço do site
+     * 
+     * @static
+     * @returns 
+     * @memberof defaultContentProvider
+     */
+    static async getcompanyAddress() {
+        return await fullPromise.onlyData('static/address.json');
+    }
+
+    /**
+     * Retorna os dados de contato do site
+     * 
+     * @static
+     * @returns 
+     * @memberof defaultContentProvider
+     */
+    static async getcompanyContact() {
+        return await fullPromise.onlyData('static/contact.json');
+    }
 }
