@@ -3,21 +3,24 @@
   section
     container
       row
-        column(md="4")
-          img(src="../../assets/bible_2.svg")
-        column(md="8")
-          h1.title Sobre nós
+        column(md="6")
+          Title(text="Sobre nós")
           .text
             p aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.
             p aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.
             p aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.
             p aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.
+        column(md="6")
 
 </template>
 <script>
 
+  import Title from '@/components/title/Title';
 
   export default {
+    components: {
+      Title,
+    },
     data() {
       return {
         
@@ -32,20 +35,6 @@
     padding: 100px 0
     text-align: left
     position: relative
-    &:before
-      content: ' '
-      display: block
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background: url(../../assets/sala.jpg) no-repeat
-      background-position: center right
-      background-size: 1200px
-      background-color: white
-      opacity: 0.8
-      z-index: -1
     img
       width: 100%
       height: auto

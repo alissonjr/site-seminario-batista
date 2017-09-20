@@ -25,7 +25,7 @@
     display: flex
     align-items: center
     justify-content: center
-    min-height: 70px
+    height: 80px
     font-size: 1em
     font-weight: bold
     text-transform: uppercase

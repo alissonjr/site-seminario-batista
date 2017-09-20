@@ -44,6 +44,4 @@
 </script>
 <style lang="sass">
 
-  @import "../assets/sass/_texts"
-
 </style>

@@ -1,7 +1,7 @@
 <template lang="pug">
   section
     container
-      h1.title DEPOIMENTOS
+      Title(text="DEPOIMENTOS")
       row.testimony
         column(md="4", class="", v-for="p in pessoas" :key="p.name")
           div.testemunho
@@ -17,7 +17,12 @@
 
   import defaultContentProvider from '@/providers/defaultContentProvider';
 
+  import Title from '@/components/title/Title';
+
   export default {
+    components: {
+      Title,
+    },
     data() {
       return {
         pessoas: [],

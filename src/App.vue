@@ -16,6 +16,8 @@
 
   @import "../node_modules/font-awesome/css/font-awesome.min.css"
 
+  @import "assets/sass/_texts"
+
   @import url("https://fonts.googleapis.com/css?family=Open+Sans")
 
   #app
@@ -37,6 +39,6 @@
   body
     position: relative
     margin: 0
-    min-height: 100%
+    height: 100%
 
 </style>

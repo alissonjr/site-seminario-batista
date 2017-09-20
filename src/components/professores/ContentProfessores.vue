@@ -2,13 +2,18 @@
 
   section
     container
-      h1.title Professores
+      Title(text="Professores")
+
 
 </template>
 <script>
 
+  import Title from '@/components/title/Title';
 
   export default {
+    components: {
+      Title,
+    },
     data() {
       return {
         
