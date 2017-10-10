@@ -1,7 +1,7 @@
 <template lang="pug">
 
   .contato
-    h1.title contato
+    title-section contato
     form
       fieldset
         label Nome:
@@ -16,8 +16,12 @@
 </template>
 <script>
 
+  import TitleSection from '@/components/utils/Title'
 
   export default {
+    components: {
+      TitleSection,
+    },
     data() {
       return {
 
@@ -32,7 +36,7 @@
 
   .contato
     flex: 1 auto
-    background: #fdfdfd
+    background: #fafafa
     padding: 100px 50px
     text-align: right
     fieldset

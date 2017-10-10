@@ -1,12 +1,11 @@
 <template lang="pug">
   section
     container
-      Title(text="DEPOIMENTOS")
+      title-section Depoimentos
       row.testimony
         column(md="4", class="", v-for="p in pessoas" :key="p.name")
           div.testemunho
-            p
-              | testemunho
+            p {{ p.texto }}
           div.person
             span(class="avatar")
             div.info
@@ -17,11 +16,11 @@
 
   import defaultContentProvider from '@/providers/defaultContentProvider';
 
-  import Title from '@/components/title/Title';
+  import TitleSection from '@/components/utils/Title';
 
   export default {
     components: {
-      Title,
+      TitleSection,
     },
     data() {
       return {
@@ -44,20 +43,6 @@
     .container
       padding: 100px 0
       position: relative
-      &:before
-        content: ' '
-        display: block
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        background: url(../../assets/chat.svg) no-repeat
-        background-position: 50px center
-        background-size: 350px
-        background-color: white
-        opacity: 0.05
-        z-index: -1
     .title
       text-align: left
       margin-bottom: 10
@@ -85,11 +70,12 @@
             color: gray
       .testemunho
         p
-          font-size: 1em
+          font-size: 0.8em
           background: #eaeaea
           border-radius: 3px
           margin: 15px 5px
-          padding: 15px 5px
+          padding: 30px
+          text-align: justify
           &:after, &:before
             content: '"'
         &:after

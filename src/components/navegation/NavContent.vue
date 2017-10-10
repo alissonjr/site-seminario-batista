@@ -3,17 +3,17 @@
   section
     div(class="secondary")
       nav-menu-secondary
-    div(class="primary")
+    container(class="primary")
       span(class="logotipo")
         img(src="../../assets/logotipo.png")
         | 
         //- span Centro teológico Batista Vale do rio doce
       span(class="navegation")
         nav-menu-primary
-      span.contact
-        i(class="fa fa-phone-square")
-        | 
-        | {{ phone }}
+        span.contact
+          i(class="fa fa-phone-square")
+          | 
+          | {{ phone }}
 
 </template>
 <script>
@@ -50,44 +50,47 @@
 
   .primary
     display: flex
-    background: white
     justify-content: space-between
     position: relative
-    height: 80px
+    height: 60px
+    margin-top: 20px
+    .logotipo
+      display: flex
+      align-items: center
+      img
+        height: 25px
+        margin: 20px 20px
+        display: block
+      span
+        text-transform: uppercase
+        font-weight: bold
+
+    .navegation
+      display: flex
+
+    .contact
+      padding: 0 30px
+      text-decoration: none
+      color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 1em
+      font-weight: bold
+      text-transform: uppercase
+      background: #41caf4
+      border-radius: 50px
+      margin-left: 20px
+      .fa
+        margin-right: 5px
 
   .secondary
-    display: flex
-    background: #f8f8f9
+    display: none
+    background: white
+    width: 100%
+    margin: 0
     justify-content: flex-end
-    flex-flow: row wrap
+    // flex-flow: row wrap
     padding-right: 20px
 
-  .logotipo
-    display: flex
-    align-items: center
-    img
-      height: 40px
-      margin: 20px 20px
-      display: block
-    span
-      text-transform: uppercase
-      font-weight: bold
-
-  .navegation
-    margin-right: 20px
-  
-  .contact
-    padding: 0 50px
-    text-decoration: none
-    color: white
-    display: flex
-    align-items: center
-    justify-content: center
-    font-size: 1em
-    font-weight: bold
-    text-transform: uppercase
-    background: #2c3e50
-    .fa
-      margin-right: 5px
-  
 </style>

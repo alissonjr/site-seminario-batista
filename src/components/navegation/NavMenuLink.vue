@@ -1,6 +1,8 @@
 <template lang="pug">
 
-  a(v-bind:href="link") {{ text }}
+  a(v-bind:href="link")
+    span {{ text }}
+    i(class="fa fa-chevron-down")
 
 </template>
 <script>
@@ -21,15 +23,33 @@
   a
     padding: 0 20px
     text-decoration: none
-    color: #7b8394
+    color: white
     display: flex
     align-items: center
     justify-content: center
-    height: 80px
+    height: 60px
     font-size: 1em
     font-weight: bold
-    text-transform: uppercase
+    // text-transform: uppercase
+    transform: 0.5s all ease-in-out
+    &:before
+      content: ' '
+      position: absolute
+      margin-top: -20px
+      margin-left: 0
+      width: 0
+      height: 2.5px
+      background: #2c3e50
     &:hover
-      background: rgba(0, 0, 0, 0.04)
+      &:before
+        width: 30px
+      .fa
+        opacity: 1
+    .fa
+      display: block
+      position: absolute
+      margin-top: 20px
+      font-size: 10px
+      opacity: 0
 
 </style>

@@ -2,7 +2,7 @@
 
   section
     .container
-      h1.title Saiba mais
+      title-section Saiba mais
       br
       small Digite seu e-mail que entraremos em contato com você
       form
@@ -12,8 +12,12 @@
 </template>
 <script>
 
+  import TitleSection from '@/components/utils/Title'
 
   export default {
+    components: {
+      TitleSection,
+    },
     data() {
       return {
         

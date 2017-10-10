@@ -1,7 +1,6 @@
 <template lang="pug">
 
   div
-    nav-content
     header-content
     content-sobre
     content-professores
@@ -43,5 +42,6 @@
 
 </script>
 <style lang="sass">
-
+  div
+    height: 100%
 </style>

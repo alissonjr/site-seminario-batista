@@ -1,6 +1,6 @@
 <template lang="pug">
   
-  div
+  container(fluid)
     ul
       li(v-for="nav in navegation")
         a(:href="nav.link") {{ nav.text }}
@@ -56,12 +56,11 @@
           text-decoration: none
           display: flex
           align-items: center
-          justify-content: center
+          justify-content: flex-end
           min-height: 30px
           font-size: .8em
-          color: #919191
-        a:hover
           color: #6A6A6A
+        a:hover
           background: rgba(0, 0, 0, 0.01)
         &.address
           .fa

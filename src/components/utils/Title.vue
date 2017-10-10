@@ -1,9 +1,12 @@
 <template lang="pug">
   
   h1.title
-    i(class="fa fa-chevron-right")
+    i(class="one fa fa-chevron-right")
     | 
-    span {{ text }}
+    span
+      slot {{ text }}
+    |
+    i(class="two fa fa-chevron-left")
 
 </template>
 <script>
@@ -22,12 +25,16 @@
     margin-bottom: 15px
     span
       font-size: 1.5em
-      text-transform: uppercase
+      text-transform: capitalize
+      
     .fa
-      font-size: 0.8em
-      margin-top: 12px
-      margin-left: -15px
+      font-size: 0.5em
+      margin-top: 15px
       position: absolute
       color: #00c2ff
+      &.one
+        margin-left: -15px
+      &.two
+        margin-left: 5px
 
 </style>

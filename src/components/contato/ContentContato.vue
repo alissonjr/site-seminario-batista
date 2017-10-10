@@ -1,8 +1,11 @@
 <template lang="pug">
 
   section
-    form-contato
-    Map
+    row
+    column(md="6")
+      form-contato
+    column(md="6")
+      Map
 
 </template>
 <script>

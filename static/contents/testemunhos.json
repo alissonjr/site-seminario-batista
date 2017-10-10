@@ -1,0 +1,20 @@
+[
+    {
+        "avatar": "static/img/default-img.png",
+        "nome": "josé da silva de almeida",
+        "local": "asfdasdf",
+        "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at turpis vel tellus auctor malesuada nec ac arcu. Cras ornare posuere sem vitae sodales. Ut orci nibh, vestibulum id scelerisque porttitor, tristique interdum velit."
+    },
+    {
+        "avatar": "static/img/default-img.png",
+        "nome": "bbb",
+        "local": "asdfasdf",
+        "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at turpis vel tellus auctor malesuada nec ac arcu. Cras ornare posuere sem vitae sodales. Ut orci nibh, vestibulum id scelerisque porttitor, tristique interdum velit."
+    },
+    {
+        "avatar": "static/img/default-img.png",
+        "nome": "ccc",
+        "local": "asdfasfd",
+        "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at turpis vel tellus auctor malesuada nec ac arcu. Cras ornare posuere sem vitae sodales. Ut orci nibh, vestibulum id scelerisque porttitor, tristique interdum velit."
+    }
+]

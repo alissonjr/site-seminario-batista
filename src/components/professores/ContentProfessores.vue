@@ -2,24 +2,39 @@
 
   section
     container
-      Title(text="Professores")
+      title-section Professores
+      row(class="professores")
+        column(md="3" v-for="prof in professores")
+          Professor(:data="prof")
 
 
 </template>
 <script>
 
-  import Title from '@/components/title/Title';
+  import TitleSection from '@/components/utils/Title';
+  import Professor from '@/components/professores/BlockProfessor';
+
+  import teachersProvider from '@/providers/teachersProvider';
 
   export default {
     components: {
-      Title,
+      TitleSection,
+      Professor,
     },
     data() {
       return {
-        
-      }
-    }
-  }
+        professores: [],
+      };
+    },
+    created() {
+      this.ready();
+    },
+    methods: {
+      ready() {
+        return teachersProvider.getTeachers().then(res => this.professores = res);
+      },
+    },
+  };
 
 </script>
 <style lang="sass" scoped>
